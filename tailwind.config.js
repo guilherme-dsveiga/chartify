@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-lightest": "#a9e8bf",
-        "primary-light": "#22e667",
-        "primary-regular": "#1db954",
-        "primary-dark": "#138039",
+        "primary-lightest": "#ebd9d3",
+        "primary-light": "#eb5e34",
+        "primary-regular": "#d64013",
+        "neutral-light": "#f0f0f0",
+        "neutral-regular": "#999999",
+        "neutral-dark": "#0f0f0f",
       },
       backgroundImage: {
         "static-pie-chart":
