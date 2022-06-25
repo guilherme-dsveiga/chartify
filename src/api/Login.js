@@ -14,7 +14,6 @@ export const getAuthorization = async (code) => {
       `${import.meta.env.VITE_SERVER_URL}/login`,
       { code }
     );
-    console.log(response.data);
     return response.data;
   } catch {
     window.location = "/";
@@ -27,7 +26,6 @@ export const refreshAuthorization = async (refreshToken) => {
       `${import.meta.env.VITE_SERVER_URL}/refresh`,
       { refreshToken }
     );
-    console.log(response.data);
     return response.data;
   } catch {
     window.location = "/";

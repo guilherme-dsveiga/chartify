@@ -4,9 +4,7 @@ import React, { useState } from "react";
 export const Header = () => {
   const [search, setSearch] = useState("");
 
-  const handleSearch = () => {
-    console.log(search);
-  };
+  const handleSearch = () => {};
 
   return (
     <header className="flex justify-between items-center bg-neutral-dark text-white py-1 md:px-10 px-5 shadow-lg">

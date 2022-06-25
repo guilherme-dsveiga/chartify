@@ -6,8 +6,6 @@ const Login = () => {
   const [urlParams] = useSearchParams();
   const code = urlParams.get("code");
 
-  console.log(code);
-
   return (
     <div className="bg-neutral-700 min-h-screen flex justify-center items-center relative">
       {code ? <Navigate to={`/dashboard?code=${code}`} /> : <SpotifyLogin />}
