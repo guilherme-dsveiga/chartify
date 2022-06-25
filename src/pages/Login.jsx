@@ -1,12 +1,16 @@
 import React from "react";
-import StaticGraphChart from "../components/static/StaticGraphChart";
-import StaticPieChart from "../components/static/StaticPieChart";
+import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
+import SpotifyLogin from "../components/SpotifyLogin";
 
 const Login = () => {
+  const [urlParams] = useSearchParams();
+  const code = urlParams.get("code");
+
+  console.log(code);
+
   return (
-    <div className="bg-primary-lightest min-h-screen flex justify-center items-center relative">
-      {/* <StaticGraphChart />
-      <StaticPieChart /> */}
+    <div className="bg-neutral-700 min-h-screen flex justify-center items-center relative">
+      {code ? <Navigate to={`/dashboard?code=${code}`} /> : <SpotifyLogin />}
     </div>
   );
 };
